@@ -31,7 +31,7 @@ namespace TextProject.Services
         {
             httpContext.Session.SetInt32("UserId", userId);
         }
-        public void SignIn(HttpContext httpContext)
+        public void SignOut(HttpContext httpContext)
         {
             httpContext.Session.Clear();
         }

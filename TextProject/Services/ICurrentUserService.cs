@@ -7,7 +7,7 @@ namespace TextProject.Services
     {
         bool IsAuthenticated(HttpContext httpContext);
         int? GetCurrentUserId(HttpContext httpContext);
-        User? GetCurrent(HttpContext httpContext);
+        User? GetCurrentUser(HttpContext httpContext);
         void SignIn(HttpContext httpContext, int userId);
         void SignOut(HttpContext httpContext);
 

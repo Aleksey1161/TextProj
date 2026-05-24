@@ -29,3 +29,29 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+
+.highlight{
+    background-color: #0094ff
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.reading-area{
+    min-height: 600px;
+    white-space: pre-wrap;
+    font-size: 1.1rem;
+    line-height: 1.8
+}S
+
+.control-panel{
+    position: sticky;
+    top: 20px;
+    background: white;
+    border-radius: 16px;
+    padding 16px;
+    border: 1px solid #ff6a00;
+    box-shadow: 0 4px 16 rgba(0,0,0, 0.08);
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+}

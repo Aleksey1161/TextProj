@@ -8,6 +8,6 @@
         public string Name { get; set; } = string.Empty;
 
         public List<SpeechLog> SpeechLogs { get; set; } = new();
-
+        public string PasswordHash { get; internal set; }
     }
 }

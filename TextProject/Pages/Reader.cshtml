@@ -1,0 +1,76 @@
+﻿@page
+@model TextProject.Pages.ReaderModel
+@{
+	ViewData["Title"] = "Читалка";
+}
+<div class="container-fluid mt-4">
+	<div class="row">
+		<div class="col-lg-9">
+			<h1 class="mb-3">Читалка</h1>
+
+			<div class="alert alert-info">
+				Проект рассчитан на браузер Edege и системные голоса Windows
+			</div>
+
+			<div class="mb-3">
+				<label>Текст для озвучивания</label>
+
+				<textarea id="text-input">
+					class=form-controll" rows="10"
+					1 предложение. 2 предложение. 3 предложение завершает пример
+				</textarea>
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Зона чтения</label>
+				<div id="text-container"
+					class="border rounded p-4 bg-light reading-area">
+					Нажмите "Читать", что бы начать
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="control-panel shadow">
+				<h4>Управление</h4>
+
+				<div class="mb-4">
+					<label class="form-label">Голос</label>
+					<select id="voice-select" class="form-control">
+						<option>Загрузите голоса...</option>
+					</select>				
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label">Скорость</label>
+				</div>
+				<label class="form-label">Скорость</label>
+				<select id="rate-select" class="form-control">
+					<option value="0.5">x0.5</option>
+					<option value="1.0">x.1.0</option>
+					<option value="1.25">x1.25</option>
+					<option value="1.5">x1.5</option>
+					<option value="2.0">x2.0</option>
+				</select>
+			</div>
+
+			<div class="d-gird gap-2">
+				<button id="btn-play" class="btn btn-success">Читать</button>
+				<button id="btn-play" class="btn btn-success">Пауза</button>
+				<button id="btn-play" class="btn btn-success">Стоп</button>
+				<button id="btn-play" class="btn btn-success">Назад</button>
+				<button id="btn-play" class="btn btn-success">Вперед</button>
+			</div>
+
+			<hr />
+			
+			<div id="status" class="text-muted">
+				Готов к работе
+			</div>
+
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+	<script src="~/js/reader.js" asp-asp-append-version="true"></script>
+}
